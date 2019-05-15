@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Ajouter un produit - Issoumann</title>
+		<meta charset="utf-8">
+		<link href="../css/ajoutProduit.css" rel="stylesheet" type="text/css">
+		<link href="../css/menubar.css" rel="stylesheet" type="text/css">
+		<link href="../css/general.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="onglets">
+			<nav>
+				<ul>
+					<li><a href="../php/listeProduit.php">Produits</a></li>
+					<li><a>Ajouter un produit</a>
+						<ul class="submenu">
+							<li><a href="vueAjoutAcoustique.html">Acoustique</a></li>
+							<li><a href="vueAjoutElectrique.html">Électrique</a></li>
+						</ul>
+					</li>
+					<li><a href="vueAjoutCategorie.html">Ajouter une Catégorie</a></li>
+					</li>
+					<li><a href="vueSuppressionProduit.html">Supprimer</a></li>
+					<li><a href="../php/deconnexion.php">Se déconnecter</a></li>		
+				</ul>
+			</nav>
+		</div>
+		<form action="../php/ajoutElectrique.php" method="POST">
+			<table>
+				<tr>
+					<th colspan="2"><h1>Ajouter dans Électrique</h1></th>
+				</tr>
+				<tr>
+					<td>ID Produit : </td>
+					<td><input type="number" name="IDaj" min="1" required></td>
+				</tr>
+				<tr>
+					<td>Marque : </td>
+					<td>
+						<select name="marque">
+							<option selected>-- Choisissez une marque --</option>
+							<option value="1">Gibson</option>
+							<option value="2">Fender</option>
+							<option value="3">Yamaha</option>
+							<option value="4">Ibanez</option>
+							<option value="5">Harley Benton</option>
+							<option value="6">Epiphone</option>
+							<option value="7">Chapman Guitars</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Modele : </td>
+					<td><input type="text" name="modele" required></td>
+				</tr>
+				<tr>
+					<td>Nom Produit : </td>
+					<td><input type="text" name="nomProd" required></td>
+				</tr>
+				<tr>
+					<td>Quantité : </td>
+					<td><input type="number" name="qte" min="1" required></td>
+				</tr>
+				<tr>
+					<td>Prix unitaire : </td>
+					<td><input type="number" name="pu" min="1" required></td>
+				</tr>
+				<tr>
+					<td>Guitare / Basse ?</td>
+					<td>
+						<select name="instru">
+							<option selected>-- Choisissez un instrument --</option>
+							<option value="1">Guitare</option>
+							<option value="2">Basse</option>"
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Bois du manche : </td>
+					<td><input type="text" name="BM" required></td>
+				</tr>
+				<tr>
+					<td>Type de micro :</td>
+					<td><input type="text" name="micro" required></td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="Annuler"></td>
+					<td><input type="submit" name="ajout" value="Ajouter Produit"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

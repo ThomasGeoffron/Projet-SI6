@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Supprimer un produit - Issoumann</title>
+		<meta charset="utf-8">
+		<link href="../css/suppressionProduit.css" rel="stylesheet" type="text/css">
+		<link href="../css/menubar.css" rel="stylesheet" type="text/css">
+		<link href="../css/general.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="onglets">
+			<nav>
+				<ul>
+					<li><a href="../php/listeProduit.php">Produits</a></li>
+					<li><a>Ajouter un produit</a>
+						<ul class="submenu">
+							<li><a href="vueAjoutAcoustique.html">Acoustique</a></li>
+							<li><a href="vueAjoutElectrique.html">Électrique</a></li>
+						</ul>
+					</li>
+					<li><a href="vueAjoutCategorie.html">Ajouter une Catégorie</a></li>
+					</li>
+					<li><a href="vueSuppressionProduit.html">Supprimer</a></li>
+					<li><a href="../php/deconnexion.php">Se déconnecter</a></li>		
+				</ul>
+			</nav>
+		</div>
+		<div class="boite">
+			<form action="../php/suppressionProduit.php" method="POST">
+				<h1>Suppression de produit</h1>
+				<label for="ID">ID Produit : </label>
+				<input type="number" name="ID" placeholder="ID du produit à supprimer">
+					
+				<input type="reset" value="Annuler">
+				<input type="submit" name="suppr" value="Supprimer">
+			</form>
+		</div>
+	</body>
+</html>

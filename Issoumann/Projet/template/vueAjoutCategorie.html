@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Ajouter une catégorie - Issoumann</title>
+		<meta charset="utf-8">
+		<link href="../css/ajoutCategorie.css" rel="stylesheet" type="text/css">
+		<link href="../css/menubar.css" rel="stylesheet" type="text/css">
+		<link href="../css/general.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="onglets">
+			<nav>
+				<ul>
+					<li><a href="../php/listeProduit.php">Produits</a></li>
+					<li><a>Ajouter un produit</a>
+						<ul class="submenu">
+							<li><a href="vueAjoutAcoustique.html">Acoustique</a></li>
+							<li><a href="vueAjoutElectrique.html">Électrique</a></li>
+						</ul>
+					</li>
+					<li><a href="vueAjoutCategorie.html">Ajouter une Catégorie</a></li>
+					</li>
+					<li><a href="vueSuppressionProduit.html">Supprimer</a></li>
+					<li><a href="../php/deconnexion.php">Se déconnecter</a></li>		
+				</ul>
+			</nav>
+		</div>
+		<form action="../php/creationCategorie.php" method="POST">
+			<table>
+				<tr>
+					<th colspan="2"><h1>Ajouter une catégorie</h1></th>
+				</tr>
+				<tr>
+					<td>
+						<label for="nomCat">Nom de la Catégorie : </label>
+					</td>
+					<td>
+						<input type="text" name="nomCat">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="Annuler"></td>
+					<td><input type="submit" name="creer" value="Créer"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
